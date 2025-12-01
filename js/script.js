@@ -31,7 +31,8 @@ new Vue({
     answerHistory: [],
     showUpdateModal: false,
     pendingFingerprint: null,
-    updateMessage: ''
+    updateMessage: '',
+    showInfoModal: false
   },
   computed: {
     currentQuestion() {
@@ -365,6 +366,12 @@ new Vue({
     toggleQuestionList() {
       this.showQuestionList = !this.showQuestionList;
       this.saveState();
+    },
+    openInfoModal() {
+      this.showInfoModal = true;
+    },
+    closeInfoModal() {
+      this.showInfoModal = false;
     },
     acknowledgeUpdate(resetStats) {
       if (resetStats) {

@@ -81,13 +81,20 @@
   z-index: 50;
 }
 
-.corner-right a {
+.corner-right a,
+.corner-right button {
   color: #1f2937;
   font-size: 1.25rem;
   transition: color 0.2s ease;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
 }
 
-.corner-right a:hover {
+.corner-right a:hover,
+.corner-right button:hover {
   color: #2563eb;
 }
 

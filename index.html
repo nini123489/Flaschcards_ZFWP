@@ -12,15 +12,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-gray-100 min-h-screen">
-    <div class="corner-right">
-        <a href="https://github.com/nini123489/Flaschcards_ZFWP" target="_blank" rel="noopener noreferrer" aria-label="GitHub Projekt">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:contact@nicklaseckardt.de" aria-label="E-Mail an contact@nicklaseckardt.de">
-            <i class="fas fa-envelope"></i>
-        </a>
-    </div>
     <div id="app" class="container mx-auto px-4 py-8">
+        <div class="corner-right">
+            <a href="https://github.com/nini123489/Flaschcards_ZFWP" target="_blank" rel="noopener noreferrer" aria-label="GitHub Projekt">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:contact@nicklaseckardt.de" aria-label="E-Mail an contact@nicklaseckardt.de">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <button type="button" @click="openInfoModal" aria-label="Informationen zum Projekt">
+                <i class="fas fa-info-circle"></i>
+            </button>
+        </div>
         <div v-if="showUpdateModal" class="update-modal-backdrop">
             <div class="update-modal">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Neue Fragen verfügbar</h3>
@@ -35,6 +38,30 @@
                     </button>
                     <button @click="postponeUpdate" class="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition">
                         Alte Fragen behalten
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div v-if="showInfoModal" class="update-modal-backdrop" @click.self="closeInfoModal">
+            <div class="update-modal">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Über dieses Projekt</h3>
+                <p class="text-gray-700 mb-3">
+                    Karteikarten Web App für das Fach Zerstörungsfreie Werkstoffprüfung bei Prof. Kasperl<br><br>
+                    Alle Fragen und Antworten sind ohne jegliche Gewähr!
+                </p>
+                <br>
+                <p class="text-gray-700 mb-3">Eckdaten:</p>
+                <ul class="list-disc list-inside text-gray-600 text-sm mb-4">
+                    <li>Dein Fortschritt wird in deinem Browser gespeichert</li>
+                    <li>Mitarbeit ist jederzeit willkommen, siehe Github</li>
+                </ul>
+                <p class="text-gray-700 mb-3">Benutzte Bibliotheken:</p>
+                <ul class="list-disc list-inside text-gray-600 text-sm mb-4">
+                    <li>vue.js</li>
+                </ul>
+                <div class="flex justify-end">
+                    <button @click="closeInfoModal" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+                        Schließen
                     </button>
                 </div>
             </div>
