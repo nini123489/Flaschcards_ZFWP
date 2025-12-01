@@ -261,16 +261,18 @@ new Vue({
       const isFirstAnswer = !this.roundAnswered.includes(questionIndex);
       if (isFirstAnswer) {
         this.roundAnswered.push(questionIndex);
+        this.roundStats.total++;
+      }
+      const previousRating = this.roundAnsweredRatings[questionIndex];
+      if (previousRating && this.roundStats.hasOwnProperty(previousRating)) {
+        this.roundStats[previousRating] = Math.max(0, this.roundStats[previousRating] - 1);
+      }
+      if (this.roundStats.hasOwnProperty(difficulty)) {
+        this.roundStats[difficulty]++;
       }
       this.$set(this.roundAnsweredRatings, questionIndex, difficulty);
-      if (!this.roundCompletionNotified && isFirstAnswer) {
-        this.roundStats.total++;
-        if (this.roundStats.hasOwnProperty(difficulty)) {
-          this.roundStats[difficulty]++;
-        }
-        if (this.roundQuestionTarget > 0 && this.roundAnswered.length >= this.roundQuestionTarget) {
-          this.triggerRoundComplete();
-        }
+      if (!this.roundCompletionNotified && this.roundQuestionTarget > 0 && this.roundAnswered.length >= this.roundQuestionTarget) {
+        this.triggerRoundComplete();
       }
     },
     triggerRoundComplete() {

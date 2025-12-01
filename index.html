@@ -133,11 +133,12 @@
                         :class="['h-full', 'flex-1', 'segment-' + status]">
                     </div>
                 </div>
+                <p class="text-sm text-gray-500 mb-1">Bewertungen dieser Runde</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="difficulty-indicator bg-green-100 text-green-800">Ausgezeichnet: {{ stats.excellent }}</span>
-                    <span class="difficulty-indicator bg-blue-100 text-blue-800">Gut: {{ stats.good }}</span>
-                    <span class="difficulty-indicator bg-yellow-100 text-yellow-800">Okay: {{ stats.fair }}</span>
-                    <span class="difficulty-indicator bg-red-100 text-red-800">Schlecht: {{ stats.poor }}</span>
+                    <span class="difficulty-indicator bg-green-100 text-green-800">Ausgezeichnet: {{ roundStats.excellent }}</span>
+                    <span class="difficulty-indicator bg-blue-100 text-blue-800">Gut: {{ roundStats.good }}</span>
+                    <span class="difficulty-indicator bg-yellow-100 text-yellow-800">Okay: {{ roundStats.fair }}</span>
+                    <span class="difficulty-indicator bg-red-100 text-red-800">Schlecht: {{ roundStats.poor }}</span>
                 </div>
             </div>
 
