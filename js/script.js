@@ -67,7 +67,7 @@ new Vue({
     async loadQuestions() {
       let loaded = false;
       try {
-        const response = await fetch('questions.json');
+        const response = await fetch('data/questions.json');
         if (response.ok) {
           const data = await response.json();
           this.questions = Array.isArray(data) ? data : [];

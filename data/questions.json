@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "question": "Wie ist eine Röntgenröhre aufgebaut?",
+    "answer": "Sie besitzt eine evakuierte Hülse mit einer Kathode samt Fokussierbecher und einer massiven Anode, die über Hochspannung verbunden sind.",
+    "explanation": "Die Kathode erzeugt und fokussiert Elektronen, die im Vakuum zur Anode beschleunigt und beim Auftreffen in Röntgenstrahlung umgewandelt werden; Gehäuse und Fenster schirmen und koppeln die Strahlung aus.",
+    "topic": "Röntgenprüfung",
+    "difficulty": 0
+  },
+  {
+    "id": 2,
+    "question": "Warum stellt man das Target in der Röntgenröhre leicht schräg?",
+    "answer": "Die leichte Schrägstellung verkleinert den effektiven Brennfleck und damit die geometrische Unschärfe, während die reale Fläche gross genug für die Wärmeabfuhr bleibt.",
+    "explanation": "Durch den Line-Focus-Effekt erscheint der Brennfleck dem Detektor kleiner, ohne die Anodenbelastung zu erhöhen, was die Bildschärfe verbessert.",
+    "topic": "Röntgenprüfung",
+    "difficulty": 0
+  },
+  {
+    "id": 3,
+    "question": "Welche Anforderungen hat die industrielle ZfWP?",
+    "answer": "Sie muss kostengünstig, zuverlässig, reproduzierbar, dokumentierbar und sicher gegenüber Personal und Bauteil sein.",
+    "explanation": "Industrielle Prüfverfahren sollen hohe Taktzahlen ermöglichen, klare Bewertungsregeln liefern und gleichzeitig Betriebskosten, Strahlenschutz und Bedienfehler minimieren.",
+    "topic": "ZfP-Grundlagen",
+    "difficulty": 0
+  },
+  {
+    "id": 4,
+    "question": "Welche Nachteile hat die visuelle Prüfung?",
+    "answer": "Sie hängt stark vom menschlichen Wahrnehmungsvermögen ab, führt zu Ermüdung und verpasst leicht sehr kleine oder verdeckte Fehler.",
+    "explanation": "Visuelle Inspektionen bieten kaum Objektivierung, benötigen viel Erfahrung und sind schwer zu automatisieren, wodurch die Fehlersicherheit begrenzt ist.",
+    "topic": "Visuelle Prüfung",
+    "difficulty": 0
+  },
+  {
+    "id": 5,
+    "question": "Was ist der Unterschied zwischen Median und Mittelwert?",
+    "answer": "Der Mittelwert ist der arithmetische Durchschnitt aller Werte, der Median der mittlere Wert der sortierten Stichprobe und unempfindlicher gegen Ausreisser.",
+    "explanation": "Bei schiefen Verteilungen kann der Median die Lage robuster beschreiben, während der Mittelwert stark von extremen Messungen verschoben wird.",
+    "topic": "Statistik",
+    "difficulty": 0
+  },
+  {
+    "id": 6,
+    "question": "Was ist das Ziel der ZfP?",
+    "answer": "Fehler und Materialeigenschaften eines Werkstücks zu identifizieren, ohne dessen Einsatzfähigkeit durch die Prüfung zu beeinträchtigen.",
+    "explanation": "Zerstörungsfreie Prüfung erlaubt Rückschlüsse auf Qualität, Sicherheit und Restlebensdauer, während das Bauteil für die Anwendung erhalten bleibt.",
+    "topic": "ZfP-Grundlagen",
+    "difficulty": 0
+  },
+  {
+    "id": 7,
+    "question": "Aufbau einer Röntgenröhre: Welche Komponenten sind entscheidend?",
+    "answer": "Kathode mit Heizfaden, Fokussierbecher, rotierende Anode mit Target, Vakuumhülle, Einstrahlfenster, Kühlung und Hochspannungskabel bilden die wesentlichen Baugruppen.",
+    "explanation": "Der Heizfaden bestimmt den Elektronenstrom, der Becher fokussiert ihn, die Rotationsanode verteilt die Wärme, Fenster und Abschirmung koppeln Strahlung aus und schützen Personal.",
+    "topic": "Röntgenprüfung",
+    "difficulty": 0
+  },
+  {
+    "id": 8,
+    "question": "Welche Schwächungsmechanismen wirken in Körpern auf Röntgenstrahlung?",
+    "answer": "Photoeffekt, Compton-Streuung, Paarbildung sowie Absorption durch Dichte- und Dickenunterschiede reduzieren die Strahlungsintensität.",
+    "explanation": "Leichte Elemente bewirken primär Streuung, schwere Elemente fördern Photoeffekt oder Paarbildung; diese Effekte bestimmen Kontrast und Durchstrahlungsfähigkeit.",
+    "topic": "Röntgenphysik",
+    "difficulty": 0
+  },
+  {
+    "id": 9,
+    "question": "Welche Nachteile hat die Computertomographie im Vergleich zur Radioskopie?",
+    "answer": "CT benötigt viele Projektionen, längere Mess- und Rekonstruktionszeiten, höheren Strahlenschutzaufwand und komplexe Datenverarbeitung.",
+    "explanation": "Gegenüber der Echtzeit-Radioskopie ist CT teurer, liefert eine höhere Dosis und verlangt eine stabile Probenlage sowie rechenintensive Rekonstruktionen.",
+    "topic": "Tomographie",
+    "difficulty": 0
+  },
+  {
+    "id": 10,
+    "question": "Was ist die Messbereichserweiterung?",
+    "answer": "Ein Verfahren, das mittels Filterung, Mehrfachbelichtung oder digitaler Korrektur den dynamischen Intensitätsbereich eines Detektors vergrössert.",
+    "explanation": "Damit lassen sich sowohl sehr dünne als auch dicke Bereiche derselben Probe abbilden, ohne dass Regionen überstrahlen oder absaufen.",
+    "topic": "Bildverarbeitung",
+    "difficulty": 0
+  },
+  {
+    "id": 11,
+    "question": "Worin unterscheiden sich Kegelstrahl und Fächerstrahlen?",
+    "answer": "Fächerstrahlen decken nur eine Ebene ab und lassen sich leichter abschirmen, während der Kegelstrahl ein Volumen pro Rotation erfasst und dadurch schneller, aber streustrahlungsintensiver ist.",
+    "explanation": "Fächerstrahlgeometrie erlaubt schmale Kollimation und lineare Detektoren für hohe Bildqualität, der Kegelstrahl benötigt grossflächige Detektoren und erzeugt mehr Streustrahlung zugunsten kurzer Messzeiten.",
+    "topic": "Prüfgeometrie",
+    "difficulty": 0
+  }
+]
