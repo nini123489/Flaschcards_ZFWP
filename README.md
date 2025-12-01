@@ -7,8 +7,8 @@ Alle Angaben und Inhalte sind ohne Gewähr und können Fehler enthalten.
 
 ```bash
 # Repository klonen
-git clone https://github.com/nini123489/Flaschcards_ZFWP.git
-cd Flaschcards_ZFWP
+git clone https://github.com/nini123489/Flashcards_ZFWP.git
+cd Flashcards_ZFWP
 
 # index.html im Browser öffnen
 ```
@@ -24,4 +24,4 @@ Fehler bitte im Issues-Tab melden, ich kümmere mich darum, sobald ich zeit und 
 ## Links
 
 [ZFWP Flashcards Website](https://zfwp.nicklaseckardt.de)
-[GitHub](https://github.com/nini123489/Flaschcards_ZFWP.git)
+[GitHub](https://github.com/nini123489/Flashcards_ZFWP.git)
