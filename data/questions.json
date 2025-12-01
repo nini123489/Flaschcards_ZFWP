@@ -2,24 +2,24 @@
   {
     "id": 1,
     "question": "Wie ist eine Röntgenröhre aufgebaut?",
-    "answer": "Sie besitzt eine evakuierte Hülse mit einer Kathode samt Fokussierbecher und einer massiven Anode, die über Hochspannung verbunden sind.",
-    "explanation": "Die Kathode erzeugt und fokussiert Elektronen, die im Vakuum zur Anode beschleunigt und beim Auftreffen in Röntgenstrahlung umgewandelt werden; Gehäuse und Fenster schirmen und koppeln die Strahlung aus.",
+    "answer": "Sie besteht aus einer vakuumisierten Glas oder Keramikröhre, in der eine Kathode und eine massiven Anode, über Hochspannung verbunden sind und Elektronen von Kathode zu Anode beschleunigen.",
+    "explanation": "In der luftleeren Hülle sitzen eine beheizte Kathode, die Elektronen emittiert und fokussiert, sowie eine massiv ausgeführte Anode (Target), auf die die Elektronen durch eine hohe Spannung beschleunigt werden. Beim Abbremsen der Elektronen im Target entsteht Röntgenstrahlung, die durch ein dünnes Einstrahlfenster austritt. Ein schwer abgeschirmtes Metallgehäuse begrenzt die Strahlung auf den Nutzstrahl und schützt das Personal, während Kühlkanäle bzw. eine rotierende Anode die entstehende Wärme abführen.",
     "topic": "Röntgenprüfung",
     "difficulty": 0
   },
   {
     "id": 2,
-    "question": "Warum stellt man das Target in der Röntgenröhre leicht schräg?",
+    "question": "Warum stellt man das Target (Anode) in der Röntgenröhre leicht schräg?",
     "answer": "Die leichte Schrägstellung verkleinert den effektiven Brennfleck und damit die geometrische Unschärfe, während die reale Fläche gross genug für die Wärmeabfuhr bleibt.",
-    "explanation": "Durch den Line-Focus-Effekt erscheint der Brennfleck dem Detektor kleiner, ohne die Anodenbelastung zu erhöhen, was die Bildschärfe verbessert.",
+    "explanation": "Durch den sogenannten Line-Focus-Effekt erscheint der Brennfleck aus Sicht des Detektors kleiner, weil man schräg auf die Anodenfläche blickt. Damit sinkt die geometrische Unschärfe und die Abbildung wird schärfer, obwohl die physische Targetfläche groß bleibt und genügend Fläche für die Wärmeverteilung und -abfuhr bietet. So lassen sich hohe Leistungen bei gleichzeitig guter Ortsauflösung realisieren.",
     "topic": "Röntgenprüfung",
     "difficulty": 0
   },
   {
     "id": 3,
     "question": "Welche Anforderungen hat die industrielle ZfWP?",
-    "answer": "Sie muss kostengünstig, zuverlässig, reproduzierbar, dokumentierbar und sicher gegenüber Personal und Bauteil sein.",
-    "explanation": "Industrielle Prüfverfahren sollen hohe Taktzahlen ermöglichen, klare Bewertungsregeln liefern und gleichzeitig Betriebskosten, Strahlenschutz und Bedienfehler minimieren.",
+    "answer": "Sie muss schnell, kostengünstig, zuverlässig, reproduzierbar, dokumentierbar und sicher gegenüber Personal und Bauteil sein.",
+    "explanation": "Industrielle ZfP-Verfahren sollen hohe Prüfstückzahlen in kurzer Zeit bewältigen und dabei die Prüfkosten pro Teil möglichst gering halten. Die Prüfergebnisse müssen reproduzierbar und normgerecht sein, damit unterschiedliche Prüfer und Anlagen zum gleichen Befund kommen. Gleichzeitig sind eine lückenlose Dokumentation und Rückverfolgbarkeit, ein hoher Automatisierungsgrad sowie ein wirksamer Strahlenschutz und eine schonende Behandlung der Bauteile gefordert.",
     "topic": "ZfP-Grundlagen",
     "difficulty": 0
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "question": "Welche Nachteile hat die visuelle Prüfung?",
     "answer": "Sie hängt stark vom menschlichen Wahrnehmungsvermögen ab, führt zu Ermüdung und verpasst leicht sehr kleine oder verdeckte Fehler.",
-    "explanation": "Visuelle Inspektionen bieten kaum Objektivierung, benötigen viel Erfahrung und sind schwer zu automatisieren, wodurch die Fehlersicherheit begrenzt ist.",
+    "explanation": "Bei der visuellen Prüfung sind die Ergebnisse stark vom Prüfer abhängig: Sehvermögen, Erfahrung und Tagesform beeinflussen den Befund. Lange, monotone Sichtprüfungen führen zu Ermüdung, wodurch die Fehlerentdeckungswahrscheinlichkeit sinkt. Sehr kleine, schlecht zugängliche oder verdeckte Fehlstellen lassen sich nur begrenzt erkennen und die Objektivierung sowie Automatisierung der Methode ist im Vergleich zu bildgebenden oder messtechnischen Verfahren erschwert.",
     "topic": "Visuelle Prüfung",
     "difficulty": 0
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "question": "Was ist der Unterschied zwischen Median und Mittelwert?",
     "answer": "Der Mittelwert ist der arithmetische Durchschnitt aller Werte, der Median der mittlere Wert der sortierten Stichprobe und unempfindlicher gegen Ausreisser.",
-    "explanation": "Bei schiefen Verteilungen kann der Median die Lage robuster beschreiben, während der Mittelwert stark von extremen Messungen verschoben wird.",
+    "explanation": "Der arithmetische Mittelwert wird berechnet, indem man alle Messwerte aufsummiert und durch deren Anzahl teilt; extrem große oder kleine Werte beeinflussen ihn stark. Der Median hingegen ist der Wert, der die sortierte Stichprobe in zwei Hälften teilt, und reagiert deshalb wenig auf Ausreißer. Bei schief verteilten oder verrauschten Daten beschreibt der Median daher die typische Lage der Werte meist robuster als der Mittelwert.",
     "topic": "Statistik",
     "difficulty": 0
   },
@@ -43,23 +43,23 @@
     "id": 6,
     "question": "Was ist das Ziel der ZfP?",
     "answer": "Fehler und Materialeigenschaften eines Werkstücks zu identifizieren, ohne dessen Einsatzfähigkeit durch die Prüfung zu beeinträchtigen.",
-    "explanation": "Zerstörungsfreie Prüfung erlaubt Rückschlüsse auf Qualität, Sicherheit und Restlebensdauer, während das Bauteil für die Anwendung erhalten bleibt.",
+    "explanation": "Zerstörungsfreie Prüfung soll innere und äußere Fehler (z. B. Risse, Poren, Einschlüsse) sowie relevante Material- und Gefügeeigenschaften erkennen, ohne das Bauteil unbrauchbar zu machen. Dadurch lassen sich Qualität, Betriebssicherheit und Restlebensdauer beurteilen, noch bevor ein Schaden im Einsatz auftritt. Gleichzeitig ermöglicht ZfP die Überwachung von Herstellprozessen und die Früherkennung von Schwachstellen, um Ausfälle und Folgekosten zu vermeiden.",
     "topic": "ZfP-Grundlagen",
     "difficulty": 0
   },
   {
     "id": 7,
     "question": "Aufbau einer Röntgenröhre: Welche Komponenten sind entscheidend?",
-    "answer": "Kathode mit Heizfaden, Fokussierbecher, rotierende Anode mit Target, Vakuumhülle, Einstrahlfenster, Kühlung und Hochspannungskabel bilden die wesentlichen Baugruppen.",
-    "explanation": "Der Heizfaden bestimmt den Elektronenstrom, der Becher fokussiert ihn, die Rotationsanode verteilt die Wärme, Fenster und Abschirmung koppeln Strahlung aus und schützen Personal.",
+    "answer": "Kathode mit Heizfaden, rotierende Anode mit Target, Vakuumhülle, Einstrahlfenster, Kühlung und Hochspannungskabel bilden die wesentlichen Baugruppen.",
+    "explanation": "Die beheizte Kathode bestimmt über ihren Heizstrom die Menge der emittierten Elektronen und damit den Strahlungsfluss. Zwischen Kathode und Anode wird eine hohe Spannung angelegt, welche die Elektronen auf das Target beschleunigt, wo sie beim Abbremsen Röntgenstrahlung erzeugen; eine Rotationsanode verteilt dabei die thermische Belastung. Die Vakuumhülle verhindert Stöße der Elektronen mit Luftmolekülen, das Einstrahlfenster lässt den Nutzstrahl austreten und Abschirmung sowie Kühlkreise (z. B. Öl- oder Wasserkühlung) sorgen für Personenschutz und Wärmeabfuhr.",
     "topic": "Röntgenprüfung",
     "difficulty": 0
   },
   {
     "id": 8,
     "question": "Welche Schwächungsmechanismen wirken in Körpern auf Röntgenstrahlung?",
-    "answer": "Photoeffekt, Compton-Streuung, Paarbildung sowie Absorption durch Dichte- und Dickenunterschiede reduzieren die Strahlungsintensität.",
-    "explanation": "Leichte Elemente bewirken primär Streuung, schwere Elemente fördern Photoeffekt oder Paarbildung; diese Effekte bestimmen Kontrast und Durchstrahlungsfähigkeit.",
+    "answer": "Photoabsorption, Compton-Streuung, Paarbildung sowie die Raylieghstreuung.",
+    "explanation": "Bei der Photoabsorption (Photoeffekt) wird das Photon vollständig von einem gebundenen Elektron absorbiert und seine Energie auf dieses übertragen; dieser Prozess dominiert bei niedrigen Photonenergien und Materialien mit hoher Ordnungszahl. Die Compton-Streuung ist eine inelastische Streuung an (fast) freien Elektronen, bei der das Photon Energie abgibt und in eine andere Richtung gestreut wird; sie ist im mittleren Energiebereich typisch und führt zu Kontrastverlust durch Streustrahlung. Die Paarbildung tritt erst oberhalb einer Schwelle von 1,022 MeV auf, wenn ein Photon im Coulombfeld des Atomkerns in ein Elektron-Positron-Paar umgewandelt wird und so vollständig verschwindet. Rayleighstreuung ist eine elastische Streuung mit nur Richtungsänderung des Photons ohne Energieverlust, sie trägt ebenfalls zur Gesamtabschwächung und Streustrahlungsbelastung bei, ist aber energetisch wenig wirksam.",
     "topic": "Röntgenphysik",
     "difficulty": 0
   },
@@ -67,15 +67,15 @@
     "id": 9,
     "question": "Welche Nachteile hat die Computertomographie im Vergleich zur Radioskopie?",
     "answer": "CT benötigt viele Projektionen, längere Mess- und Rekonstruktionszeiten, höheren Strahlenschutzaufwand und komplexe Datenverarbeitung.",
-    "explanation": "Gegenüber der Echtzeit-Radioskopie ist CT teurer, liefert eine höhere Dosis und verlangt eine stabile Probenlage sowie rechenintensive Rekonstruktionen.",
+    "explanation": "Für eine CT müssen aus vielen Winkeln Projektionen aufgenommen werden, was die Messzeit im Vergleich zur Echtzeit-Radioskopie deutlich erhöht und eine absolut stabile, reproduzierbare Probenlage erfordert. Die große Anzahl von Aufnahmen führt zu höherer Dosis und größeren Datenmengen, die mit rechenaufwendigen Rekonstruktionsalgorithmen (z. B. gefilterte Rückprojektion) verarbeitet werden müssen. Die Anlagen sind komplexer und teurer, der Strahlenschutzaufwand steigt, und für die Auswertung der 3D-Volumendaten ist erfahrenes Fachpersonal oder spezielle Software notwendig.",
     "topic": "Tomographie",
     "difficulty": 0
   },
   {
     "id": 10,
     "question": "Was ist die Messbereichserweiterung?",
-    "answer": "Ein Verfahren, das mittels Filterung, Mehrfachbelichtung oder digitaler Korrektur den dynamischen Intensitätsbereich eines Detektors vergrössert.",
-    "explanation": "Damit lassen sich sowohl sehr dünne als auch dicke Bereiche derselben Probe abbilden, ohne dass Regionen überstrahlen oder absaufen.",
+    "answer": "Ein Verfahren, das mittels versetzen des Detektors, den effektieven Detektionsbereich vergrößert.",
+    "explanation": "Unter Messbereichserweiterung versteht man in der bildgebenden ZfP, dass der effektive Prüfbereich über die eigentliche physische Größe des Detektors hinaus vergrößert wird. Dazu wird der Detektor relativ zum Bauteil und zur Strahlenquelle in mehrere Positionen verfahren, wobei sich die einzelnen Detektorfelder überlappen. Aus diesen Teilbildern setzt eine Rekonstruktions- oder Stitching-Software ein Gesamtbild zusammen, sodass auch große oder langgestreckte Bauteile mit einem vergleichsweise kleinen Detektor vollständig und mit einheitlicher Bildqualität erfasst werden können.",
     "topic": "Bildverarbeitung",
     "difficulty": 0
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "question": "Worin unterscheiden sich Kegelstrahl und Fächerstrahlen?",
     "answer": "Fächerstrahlen decken nur eine Ebene ab und lassen sich leichter abschirmen, während der Kegelstrahl ein Volumen pro Rotation erfasst und dadurch schneller, aber streustrahlungsintensiver ist.",
-    "explanation": "Fächerstrahlgeometrie erlaubt schmale Kollimation und lineare Detektoren für hohe Bildqualität, der Kegelstrahl benötigt grossflächige Detektoren und erzeugt mehr Streustrahlung zugunsten kurzer Messzeiten.",
+    "explanation": "Beim Fächerstrahl wird die Röntgenstrahlung in Form eines dünnen, zweidimensionalen Strahlfächers ausgesendet, der zusammen mit einem zeilenförmigen Detektor nur eine Schicht (Slice) des Prüfkörpers abdeckt. Das erleichtert die Abschirmung, reduziert Streustrahlung und führt zu relativ artefaktarmen CT-Rekonstruktionen, erfordert aber mechanisches Verfahren der Probe oder des Systems zur Volumenaufnahme. Der Kegelstrahl hingegen beleuchtet mit einer flächigen Strahlgeometrie ein ganzes Volumen und wird mit einem Flächendetektor aufgezeichnet, wodurch pro Rotation mehr Informationen gewonnen werden und die Messzeit sinkt. Dafür nimmt die Streustrahlung zu, die Abschirmung wird anspruchsvoller und die Rekonstruktionsalgorithmen sind komplexer, was zu stärkeren Artefakten bei ungünstiger Geometrie führen kann.",
     "topic": "Prüfgeometrie",
     "difficulty": 0
   }
