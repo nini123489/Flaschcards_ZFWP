@@ -86,5 +86,22 @@
     "explanation": "Beim Fächerstrahl wird die Röntgenstrahlung in Form eines dünnen, zweidimensionalen Strahlfächers ausgesendet, der zusammen mit einem zeilenförmigen Detektor nur eine Schicht (Slice) des Prüfkörpers abdeckt. Das erleichtert die Abschirmung, reduziert Streustrahlung und führt zu relativ artefaktarmen CT-Rekonstruktionen, erfordert aber mechanisches Verfahren der Probe oder des Systems zur Volumenaufnahme. Der Kegelstrahl hingegen beleuchtet mit einer flächigen Strahlgeometrie ein ganzes Volumen und wird mit einem Flächendetektor aufgezeichnet, wodurch pro Rotation mehr Informationen gewonnen werden und die Messzeit sinkt. Dafür nimmt die Streustrahlung zu, die Abschirmung wird anspruchsvoller und die Rekonstruktionsalgorithmen sind komplexer, was zu stärkeren Artefakten bei ungünstiger Geometrie führen kann.",
     "topic": "Prüfgeometrie",
     "difficulty": 0
+  },
+  {
+  "id": 12,
+  "question": "Mit welcher Scan-Geometrie kann man Artefakte besonders gut vermeiden?",
+  "answer": "Mit der Spiral- bzw. Helix-CT, da sie kontinuierlich scannt und dadurch Überlappungen und Diskontinuitäten reduziert.",
+  "explanation": "Bei der Spiral- (Helix-) CT bewegt sich der Detektor kontinuierlich entlang der Rotationsachse, sodass sich eine helikale Bahn um das Prüfteil ergibt. Dadurch werden Lücken zwischen einzelnen Schichten vermieden, was Ringartefakte, Interpolationsfehler und Diskontinuitäten deutlich reduziert. Zudem entstehen gleichmäßigere Projektionsdaten, da jeder Punkt des Prüfstücks aus vielen verschiedenen Winkeln erfasst wird.",
+  "topic": "Tomographie",
+  "difficulty": 0
+  },
+  {
+  "id": 13,
+  "question": "Was sind Artefakte in der Tomographie?",
+  "answer": "Artefakte sind systematische Abbildungsfehler, die das rekonstruierte Bild verfälschen und nicht dem realen Bauteil entsprechen.",
+  "explanation": "Artefakte entstehen durch physikalische Effekte wie Streustrahlung,... sowie durch geometrische Probleme wie Bewegungen, falsche Kalibrierung oder limitierte Rekonstruktionsalgorithmen. Sie äußern sich etwa als Streifen, Schatten, Verzerrungen oder Ringstrukturen im CT-Bild und erschweren die richtige Interpretation des Bauteils, obwohl sie keine realen Materialfehler darstellen.",
+  "topic": "Tomographie",
+  "difficulty": 0
   }
+
 ]
