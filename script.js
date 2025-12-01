@@ -28,7 +28,10 @@ new Vue({
     activeOrder: [],
     showStats: false,
     showQuestionList: false,
-    answerHistory: []
+    answerHistory: [],
+    showUpdateModal: false,
+    pendingFingerprint: null,
+    updateMessage: ''
   },
   computed: {
     currentQuestion() {
@@ -73,6 +76,18 @@ new Vue({
       } catch (e) {console.warn('Die Fragen konnten nicht aus der Datei geladen werden. Fallback wird verwendet:', e);}
       if (!loaded) {
         this.questions = fallbackQuestions;
+      }
+      const fingerprint = this.generateQuestionsFingerprint(this.questions);
+      const storedFingerprint = localStorage.getItem('questionsFingerprint');
+      if (!storedFingerprint) {
+        localStorage.setItem('questionsFingerprint', fingerprint);
+        this.pendingFingerprint = fingerprint;
+      } else if (storedFingerprint !== fingerprint) {
+        this.showUpdateModal = true;
+        this.updateMessage = 'Auf dem Server liegen aktualisierte Quizfragen. Statistiken können dadurch veraltet sein.';
+        this.pendingFingerprint = fingerprint;
+      } else {
+        this.pendingFingerprint = fingerprint;
       }
       this.initializeStatsAndOrder();
       this.loadState();
@@ -322,8 +337,8 @@ new Vue({
       }
       this.saveState();
     },
-    resetAllQuestions() {
-      if (!confirm('Möchtest du wirklich alle Fortschritte und Statistiken zurücksetzen?')) {
+    resetAllQuestions(skipConfirm = false) {
+      if (!skipConfirm && !confirm('Möchtest du wirklich alle Fortschritte und Statistiken zurücksetzen?')) {
         return;
       }
       this.questionStats = this.questions.map(() => this.createEmptyQuestionStat());
@@ -350,6 +365,34 @@ new Vue({
     toggleQuestionList() {
       this.showQuestionList = !this.showQuestionList;
       this.saveState();
+    },
+    acknowledgeUpdate(resetStats) {
+      if (resetStats) {
+        this.resetAllQuestions(true);
+      }
+      if (this.pendingFingerprint) {
+        localStorage.setItem('questionsFingerprint', this.pendingFingerprint);
+      }
+      this.showUpdateModal = false;
+      this.pendingFingerprint = null;
+      this.updateMessage = '';
+    },
+    postponeUpdate() {
+      this.showUpdateModal = false;
+      this.updateMessage = '';
+      // leave fingerprint untouched so the popup reappears on next visit
+    },
+    generateQuestionsFingerprint(questions) {
+      if (!Array.isArray(questions)) return '';
+      return JSON.stringify(
+        questions.map(q => ({
+          id: q.id,
+          question: q.question,
+          answer: q.answer,
+          explanation: q.explanation,
+          topic: q.topic
+        }))
+      );
     }
   },
   mounted() {
