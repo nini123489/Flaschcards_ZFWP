@@ -33,6 +33,7 @@ new Vue({
     },
     roundAnswered: [],
     roundQuestionTarget: 0,
+    roundLocked: false,
     questionStats: [],
     activeOrder: [],
     showStats: false,
@@ -236,6 +237,7 @@ new Vue({
       this.showRoundCompleteModal = false;
       this.roundCompletionNotified = false;
       this.confettiPieces = [];
+      this.roundLocked = false;
     },
     recordRoundProgress(questionIndex, difficulty) {
       const isFirstAnswer = !this.roundAnswered.includes(questionIndex);
@@ -257,6 +259,7 @@ new Vue({
       this.roundCompletionNotified = true;
       this.showRoundCompleteModal = true;
       this.generateConfetti();
+      this.roundLocked = true;
     },
     generateConfetti() {
       const pieces = 24;
@@ -271,9 +274,11 @@ new Vue({
       }));
     },
     toggleAnswer() {
+      if (this.roundLocked) return;
       this.showAnswer = !this.showAnswer;
     },
     rateAnswer(difficulty) {
+      if (this.roundLocked) return;
       if (!this.questions.length || !this.activeOrder.length) return;
       const questionIndex = this.activeOrder[this.currentQuestionIndex];
       const qs = this.questionStats[questionIndex];
@@ -312,6 +317,11 @@ new Vue({
       }
     },
     nextQuestion() {
+      if (this.roundLocked) {
+        this.showAnswer = false;
+        this.saveState();
+        return;
+      }
       if (!this.activeOrder.length) {
         this.showAnswer = false;
         return;
@@ -326,6 +336,7 @@ new Vue({
       this.saveState();
     },
     prevQuestion() {
+      if (this.roundLocked) return;
       if (!this.activeOrder.length) return;
       if (this.currentQuestionIndex > 0) {
         this.currentQuestionIndex--;
@@ -336,6 +347,7 @@ new Vue({
       this.saveState();
     },
     skipQuestion() {
+      if (this.roundLocked) return;
       this.rateAnswer('excellent');
     },
     saveState() {
@@ -348,6 +360,7 @@ new Vue({
       localStorage.setItem('showQuestionList', this.showQuestionList);
       localStorage.setItem('answerHistory', JSON.stringify(this.answerHistory));
       localStorage.setItem('lastActivityDate', this.lastActivityDate);
+      localStorage.setItem('roundLocked', this.roundLocked);
     },
     loadState() {
       const savedIndexStr = localStorage.getItem('currentQuestionIndex');
@@ -383,6 +396,10 @@ new Vue({
       const lastActivity = localStorage.getItem('lastActivityDate');
       if (lastActivity) {
         this.lastActivityDate = lastActivity;
+      }
+      const roundLockedStr = localStorage.getItem('roundLocked');
+      if (roundLockedStr !== null) {
+        this.roundLocked = roundLockedStr === 'true';
       }
       if (this.currentQuestionIndex >= this.activeOrder.length) {
         this.currentQuestionIndex = 0;
